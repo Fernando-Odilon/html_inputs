@@ -1,69 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <main class="main-container">
         <h1>Lorem ipsum dolor sit amet consectetur </h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ut qui dolorem molestias cumque </p>
-        <!-- Indica que será um formulário de envio de dados -->
-        <form class="input-catalog-form">
 
+        <!-- Indica que será um formulário de envio de dados -->
+        <form class="input-catalog-form" action="./cadastro-sucesso.html">
+
+            <!-- Dados Pessoais e Texto -->
             <section class="form-section">
-                <fieldset class="form-section">
-                    <legend class="form-group-title">Opções e Seleções</legend>
+                <fieldset class="form-group">
+                    <legend class="form-group-title">Dados Pessoais e Texto</legend>
 
                     <label for="nome" class="form-label">Nome:</label>
-                    <input type="text" id="nome" name="nome" class="form-input" placeholder="Digite seu nome completo" required minlength="3">
+                    <input type="text" id="nome" name="nome" class="form-input" placeholder="Digite seu nome completo"
+                        required minlength="3" />
 
                     <label for="senha" class="form-label">Senha:</label>
-                    <input type="password" id="senha" name="email" class="form-input" placeholder="Mínimo de 8 caracteres" required minlength="8">
-                    
+                    <input type="password" id="senha" name="email" class="form-input"
+                        placeholder="Mínimo de 8 caracteres" required minlength="8" />
+
                     <label for="email" class="form-label">E-mail:</label>
-                    <input type="email" id="email" name="email" class="form-input" placeholder="exemplo@dominio.com" required>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="exemplo@dominio.com"
+                        required />
 
                     <label for="telefone" class="form-label">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" class="form-input" placeholder="(99) 99999-9999">
+                    <input type="tel" id="telefone" name="telefone" class="form-input" placeholder="(99) 99999-9999" />
 
                     <label for="site" class="form-label">URL do site:</label>
-                    <input type="url" id="site" name="site" class="form-input" placeholder="https://www.seusite.com">
+                    <input type="url" id="site" name="site" class="form-input" placeholder="https://www.seusite.com" />
 
                     <label for="pesquisa" class="form-label">Pesquisa:</label>
-                    <input type="search" id="pesquisa" name="pesquisa" class="form-input" placeholder="Busque um termo...">
+                    <input type="search" id="pesquisa" name="pesquisa" class="form-input"
+                        placeholder="Busque um termo..." />
+
+                </fieldset>
+            </section>
+
+            <!-- Opções e seleções -->
+            <section class="form-section">
+                <fieldset class="form-section">
+
+                    <legend>Opções e Seleções</legend>
+
+                    <label for="acting-area">Qual sua área de atuação</label>
+                    <select name="acting-area" id="acting-area">
+                        <option value="" selected="Selecione uma opção">Selecione uma opção</option>
+                        <option value="frontend">Front-end</option>
+                        <option value="backend">Back-end</option>
+                        <option value="fullstack">Full-stack</option>
+                        <option value="devops">DevOps</option>
+                    </select>
+
+                    <p class="form-label">Quais tecnologias você conhece?</p>
+
+                    <div class="form-check">
+                        <input type="checkbox" name="tecnologia" id="html" value="html" checked />
+                        <label for="html">HTML</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" name="tecnologia" id="css" value="css" />
+                        <label for="css">CSS</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" name="tecnologia" id="javascript" value="javascript" />
+                        <label for="javascript">JavaScript</label>
+                    </div>
+
+                    <p class="form-label">Qual seu nível de experiência?</p>
+
+                    <div class="form-radio">
+                        <input type="radio" name="experiencia" id="iniciante" value="iniciante">
+                        <label for="iniciante">Inciante</label>
+                    </div>
+
+                    <div class="form-radio">
+                        <input type="radio" name="experiencia" id="intermediario" value="intermediario">
+                        <label for="intermediario">intermediario</label>
+                    </div>
+
+                    <div class="form-radio">
+                        <input type="radio" name="experiencia" id="avançado" value="avançado">
+                        <label for="avançado">Avançado</label>
+                    </div>
+                </fieldset>
+            </section>
+
+            <!-- Valores Numéricos e Intervalos -->
+            <section class="form-section">
+                <fieldset class="form-section">
+                    <legend>Dados Númericos</legend>
+                    <label for="idade" class="form-label">Idade:</label>
+                    <input type="number" id="idade" name="idade" class="form-input" min="18" max="120" step="1"
+                        value="18" required />
+
+                    <label for="" class="form-label">Satisfação</label>
+                    <input type="range" id="satisfacao" name="satisfacao" class="form-range" min="0" max="100" step="10"
+                        value="50" />
 
                 </fieldset>
             </section>
 
             <section class="form-section">
                 <fieldset class="form-section">
+
+                    <label for="data-nascimento" class="form-label">Data de Nascimento:</label>
+                    <input type="date" class="form-input" id="data-nascimento" name="data-nascimento">
+
+                    <label for="hora-evento" class="form-label">Hora do Evento</label>
+                    <input type="time" name="hora-evento" id="hora-evento" class="form-input" />
+                    
+                    <label for="reuniao" class="form-label">Data e Hora da Reunião</label>
+                    <input type="datetime-local" name="reuniao" id="reuniao" class="classe" />
+
                 </fieldset>
             </section>
 
             <section class="form-section">
                 <fieldset class="form-section">
+
+                    <legend class="form-group-title">Arquivos e Cores</legend>
+                    <label for="cor-favorita" class="form-label">Cor Favorita</label>
+                    <input type="color" class="form-color-picker" id="cor-favorita" name="cor-favorita" value="#4a90e2" />
+                    
+                    <label for="foto-perfil" class="form-label">Foto de Perfil</label><input type="file" class="form-file-input" id="foto-perfil" name="foto-perfil" accept="image/png, image/jpeg" />
+
                 </fieldset>
             </section>
 
             <section class="form-section">
                 <fieldset class="form-section">
-                </fieldset>
-            </section>
-
-            <section class="form-section">
-                <fieldset class="form-section">
-                </fieldset>
-            </section>
-
-            <section class="form-section">
-                <fieldset class="form-section">
+                    <legend class="form-group-title">Controles do Formulário</legend>
+                    <div class="form-controls">
+                        <input type="text" class="form-button submit-button type="submit" value="Enviar Formulário" />
+                        <input type="text" class="form-button reset-button type="reset" value="Limpar Tudo" />
+                        <input type="text" class="form-button action-button type="button" value="Botão Genérico" onclick="alert('Botão clicado')" />
+                    </div>
                 </fieldset>
             </section>
 
         </form>
+
+        </form>
     </main>
 </body>
+
 </html>
