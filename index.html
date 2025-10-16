@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -10,8 +10,8 @@
 
 <body>
     <main class="main-container">
-        <h1>Lorem ipsum dolor sit amet consectetur </h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ut qui dolorem molestias cumque </p>
+        <h1>Catálogo de Inputs HTML</h1>
+        <p>Um formuláiro de exemplo para demonstrar os diferentes tipos de inputs e seus atributos</p>
 
         <!-- Indica que será um formulário de envio de dados -->
         <form class="input-catalog-form" action="./cadastro-sucesso.html">
@@ -48,12 +48,12 @@
 
             <!-- Opções e seleções -->
             <section class="form-section">
-                <fieldset class="form-section">
+                <fieldset class="form-group">
 
-                    <legend>Opções e Seleções</legend>
+                    <legend class="form-group-title">Opções e Seleções</legend>
 
                     <label for="acting-area">Qual sua área de atuação</label>
-                    <select name="acting-area" id="acting-area">
+                    <select class="form-select" name="acting-area" id="acting-area">
                         <option value="" selected="Selecione uma opção">Selecione uma opção</option>
                         <option value="frontend">Front-end</option>
                         <option value="backend">Back-end</option>
@@ -99,8 +99,8 @@
 
             <!-- Valores Numéricos e Intervalos -->
             <section class="form-section">
-                <fieldset class="form-section">
-                    <legend>Dados Númericos</legend>
+                <fieldset class="form-group">
+                    <legend class="form-group-title">Dados Númericos</legend>
                     <label for="idade" class="form-label">Idade:</label>
                     <input type="number" id="idade" name="idade" class="form-input" min="18" max="120" step="1"
                         value="18" required />
@@ -113,7 +113,7 @@
             </section>
 
             <section class="form-section">
-                <fieldset class="form-section">
+                <fieldset class="form-group">
 
                     <label for="data-nascimento" class="form-label">Data de Nascimento:</label>
                     <input type="date" class="form-input" id="data-nascimento" name="data-nascimento">
@@ -122,13 +122,13 @@
                     <input type="time" name="hora-evento" id="hora-evento" class="form-input" />
                     
                     <label for="reuniao" class="form-label">Data e Hora da Reunião</label>
-                    <input type="datetime-local" name="reuniao" id="reuniao" class="classe" />
+                    <input type="datetime-local" name="reuniao" id="reuniao" class="form-input" />
 
                 </fieldset>
             </section>
 
             <section class="form-section">
-                <fieldset class="form-section">
+                <fieldset class="form-group">
 
                     <legend class="form-group-title">Arquivos e Cores</legend>
                     <label for="cor-favorita" class="form-label">Cor Favorita</label>
@@ -140,17 +140,15 @@
             </section>
 
             <section class="form-section">
-                <fieldset class="form-section">
+                <fieldset class="form-group">
                     <legend class="form-group-title">Controles do Formulário</legend>
                     <div class="form-controls">
-                        <input type="text" class="form-button submit-button type="submit" value="Enviar Formulário" />
-                        <input type="text" class="form-button reset-button type="reset" value="Limpar Tudo" />
-                        <input type="text" class="form-button action-button type="button" value="Botão Genérico" onclick="alert('Botão clicado')" />
+                        <input type="submit" class="form-button submit-button type="submit" value="Enviar Formulário" />
+                        <input type="reset" class="form-button reset-button type="reset" value="Limpar Tudo" />
+                        <input type="button" class="form-button action-button type="button" value="Botão Genérico" onclick="alert('Botão clicado')" />
                     </div>
                 </fieldset>
             </section>
-
-        </form>
 
         </form>
     </main>
